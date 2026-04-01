@@ -16,6 +16,7 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .logoBox {
@@ -31,6 +32,7 @@
 .headingPrimary {
     color: #fff;
     text-transform: uppercase;
+    margin-bottom: 60px;
 }
 
 .headingPrimaryMain {

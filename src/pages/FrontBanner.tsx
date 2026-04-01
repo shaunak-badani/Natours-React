@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './FrontBanner.module.css';
 import logo from "../assets/img/logo-white.png";
+import Button from '../components/Button';
 
 const FrontBanner = () => {
     return (
@@ -13,6 +14,8 @@ const FrontBanner = () => {
                     <span className={styles.headingPrimaryMain}>Outdoors </span>
                     <span className={styles.headingPrimarySub}>is where life happens</span>
                 </h1>
+                <Button 
+                    text={"Discover our tours"} />
             </div>
         </header> 
     );
