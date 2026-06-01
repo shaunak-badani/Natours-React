@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FrontBanner.module.css';
+import styles from './FrontBanner.module.scss';
 import logo from "../assets/img/logo-white.png";
 import Button from '../components/Button';
 

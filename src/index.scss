@@ -14,8 +14,12 @@
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
+  --color-primary: #55c57a;
+  --color-primary-light: #7ed56f;
+  --color-primary-dark: #28b485;
+  
 
-  font: 18px/145% var(--sans);
+  /* font: 18px/145% var(--sans); */
   letter-spacing: 0.18px;
   color-scheme: light dark;
   color: var(--text);
@@ -50,11 +54,17 @@
   }
 }
 
+html {
+  font-size: 62.5%;
+}
+
 /* universal reset */
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 body {
@@ -65,7 +75,11 @@ body {
   line-height: 1.7;
   color: #777;
   /* padding does not get inherited, just applied all around the body */
-  padding: 30px;
+  padding: 3rem; 
+  /* 3 rem relative to root = 3 * 10px = 30px */
+
+  box-sizing: border-box;
+
 }
 
 h1 {
