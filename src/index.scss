@@ -1,4 +1,6 @@
 @use './styles/variables' as *; 
+@use './styles/base' as *; 
+@use './styles/typography' as *; 
 
 :root {
   --text: #6b6375;
@@ -57,31 +59,8 @@
 }
 
 html {
+  // This defines what 1 rem is
   font-size: 62.5%;
-}
-
-/* universal reset */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-body {
-  /* font will get inherited from body for all elements */
-  font-family: 'Lato', var(--heading);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: $color-grey-dark;
-  /* padding does not get inherited, just applied all around the body */
-  padding: 3rem; 
-  /* 3 rem relative to root = 3 * 10px = 30px */
-
-  box-sizing: border-box;
-
 }
 
 h1 {

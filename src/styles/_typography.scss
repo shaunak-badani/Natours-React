@@ -1,0 +1,35 @@
+@use './variables' as *; 
+
+.headingPrimary {
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+
+    &Main
+    {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+    }
+
+    &Sub 
+    {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+    }
+}
+
+body {
+  /* font will get inherited from body for all elements */
+  font-family: 'Lato', var(--heading);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  /* padding does not get inherited, just applied all around the body */
+  padding: 3rem; 
+  /* 3 rem relative to root = 3 * 10px = 30px */
+}
