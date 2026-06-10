@@ -1,3 +1,5 @@
+@use './styles/variables' as *; 
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -73,7 +75,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   /* padding does not get inherited, just applied all around the body */
   padding: 3rem; 
   /* 3 rem relative to root = 3 * 10px = 30px */
