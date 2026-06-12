@@ -1,17 +1,16 @@
 @use "../styles/variables" as *;
 
 .card {
+    // FUNCTIONALITY
+
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
 
-    height: 50rem;
+    height: 52rem;
 
     &Side {
-        color: #fff;
-        height: 50rem;
-        font-size: 2rem;
-
+        height: 52rem;
         transition: all 0.8s ease;
         position: absolute;
         top: 0;
@@ -20,6 +19,7 @@
 
         width: 100%;
         border-radius: 3px;
+        overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
         &Front {
@@ -36,10 +36,77 @@
     }
 
     &:hover &SideFront {
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
     }
 
     &:hover &SideBack {
         transform: rotateY(0deg);
+    }
+
+    // FRONT SIDE STYLING
+    &Picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: color;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+                url("../assets/img/nat-5.jpg");
+        }
+
+        &2 {
+            background-image: url("../assets/img/nat-5.jpg");
+        }
+
+        &3 {
+            background-image: url("../assets/img/nat-5.jpg");
+        }
+    }
+
+    &Heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        width: 75%;
+    }
+
+    &HeadingSpan 
+    {
+        padding: 1rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &1 {
+            background-image: linear-gradient(to right bottom, 
+                rgba($color-secondary-light, 0.85), rgba($color-secondary-dark, 0.85));
+        }
+    }
+
+    &Details {
+        padding: 3rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child)
+                {
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            }
+        }
     }
 }
