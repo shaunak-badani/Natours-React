@@ -1,59 +1,59 @@
-import styles from "./GridTest.module.scss";
-
+import Col from "../components/Col";
+import Row from "../components/Row";
 
 const GridTest = () => {
 
     return (
-        <section className={styles.gridTest}>
-            <div className={styles.row}>
-                <div className={styles.col1of2}>
+        <section>
+            <Row>
+                <Col length={1} total={2}>
                     Col 1 of 2
-                </div>
-                <div className={styles.col1of2}>
+                </Col>
+                <Col length={1} total={2}>
                     Col 1 of 2
-                </div>
-            </div>
-            <div className={styles.row}>
-                <div className={styles.col1of3}>
+                </Col>
+            </Row>
+            <Row>
+                <Col length={1} total={3}>
                     Col 1 of 3
-                </div>
-                <div className={styles.col1of3}>
+                </Col>
+                <Col length={1} total={3}>
                     Col 1 of 3
-                </div>
-                <div className={styles.col1of3}>
+                </Col>
+                <Col length={1} total={3}>
                     Col 1 of 3
-                </div>
-            </div>
-            <div className={styles.row}>
-                <div className={styles.col1of3}>
+                </Col>
+            </Row>
+            <Row>
+                <Col length={1} total={3}>
                     Col 1 of 3
-                </div>
-                <div className={styles.col2of3}>
+                </Col>
+                <Col length={2} total={3}>
                     Col 2 of 3
-                </div>
-            </div>
-            <div className={styles.row}>
-                <div className={styles.col1of4}>
+                </Col>
+            </Row>
+            <Row>
+                <Col length={1} total={4}>
                     Col 1 of 4
-                </div>
-                <div className={styles.col1of4}>
+                </Col>
+                <Col length={1} total={4}>
                     Col 1 of 4
-                </div>
-                <div className={styles.col1of4}>
+                </Col>
+                <Col length={1} total={4}>
                     Col 1 of 4
-                </div>
-                <div className={styles.col1of4}>
+                </Col>
+                <Col length={1} total={4}>
                     Col 1 of 4
-                </div>
-            </div>
-            <div className={styles.row}>
-                <div className={styles.col1of4}>
+                </Col>
+            </Row>
+            <Row>
+                <Col length={1} total={4}>
                     Col 1 of 4
-                </div>
-                <div className={styles.col3of4}>
+                </Col>
+                <Col length={3} total={4}>
                     Col 3 of 4
-                </div>
-            </div>
+                </Col>
+            </Row>
         </section>
     )
 }
