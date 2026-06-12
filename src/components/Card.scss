@@ -1,0 +1,45 @@
+@use "../styles/variables" as *;
+
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+
+    height: 50rem;
+
+    &Side {
+        color: #fff;
+        height: 50rem;
+        font-size: 2rem;
+
+        transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+        &Front {
+            
+        }
+
+        &Back {
+            transform: rotateY(180deg);
+
+            &1 {
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+        }
+    }
+
+    &:hover &SideFront {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &SideBack {
+        transform: rotateY(0deg);
+    }
+}
