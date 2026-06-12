@@ -1,0 +1,22 @@
+
+.uMarginBottomSmall {
+    margin-bottom: 1.5rem;
+}
+
+.uMarginBottomMedium {
+    margin-bottom: 4rem;
+}
+
+
+.uMarginBottomBig {
+    margin-bottom: 8rem;
+}
+
+
+.uCenterText
+{
+    /** 
+    Works only if the child is an inline block element
+    **/
+    text-align: center;
+}

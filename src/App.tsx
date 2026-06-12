@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import FrontBanner from './pages/FrontBanner';
 import GridTest from './pages/GridTest';
+import About from './pages/About'
 
 function App() {
 
@@ -12,7 +13,10 @@ function App() {
     <>
       <section>
         <FrontBanner />
-        <GridTest />
+        {/* <GridTest /> */}
+        <main>
+          <About />
+        </main>
       </section>
     </>
   )
