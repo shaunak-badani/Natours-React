@@ -8,6 +8,12 @@ import { HeadingSecondary, HeadingTertiary } from "../components/Headings";
 import Paragraph from "../components/Paragraph";
 import { SecondaryButton } from "../components/Button";
 
+import nat1 from "../assets/img/nat-1-large.jpg";
+import nat2 from "../assets/img/nat-2-large.jpg";
+import nat3 from "../assets/img/nat-3-large.jpg";
+
+import "../components/Composition.scss";
+
 const About = () => {
 
     return (
@@ -37,7 +43,11 @@ const About = () => {
                     </SecondaryButton>
                 </Col>
                 <Col length={1} total={2}>
-                    Image composition
+                    <div className="composition">
+                        <img src={nat1} alt="Photo 1" className="compositionPhoto compositionPhotoP1" />
+                        <img src={nat2} alt="Photo 2" className="compositionPhoto compositionPhotoP2" />
+                        <img src={nat3} alt="Photo 3" className="compositionPhoto compositionPhotoP3" />
+                    </div>
                 </Col>
             </Row>
         </section>
