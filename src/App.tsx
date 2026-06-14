@@ -50,7 +50,9 @@ function App() {
                       <p className="cardPriceOnly">Only</p>
                       <p className="cardPriceValue">$297</p>
                     </div>
-                    <Button text="Book now!" />
+                    <Button>
+                      Book now!
+                    </Button>
                   </CardBack>
                 </Card>
               </Col>
@@ -76,7 +78,9 @@ function App() {
                       <p className="cardPriceOnly">Only</p>
                       <p className="cardPriceValue">$497</p>
                     </div>
-                    <Button text="Book now!" />
+                    <Button>
+                      Book now!
+                    </Button>
                   </CardBack>
                 </Card>
               </Col>
@@ -102,11 +106,18 @@ function App() {
                       <p className="cardPriceOnly">Only</p>
                       <p className="cardPriceValue">$897</p>
                     </div>
-                    <Button text="Book now!" />
+                    <Button>
+                      Book now!
+                    </Button>
                   </CardBack>
                 </Card>
               </Col>
             </Row>
+            <CenterText classNames={["uMarginTopHuge"]}>
+              <Button scheme="Green">
+                Discover all tours
+              </Button>
+            </CenterText>
           </section>
         </main>
       </section>

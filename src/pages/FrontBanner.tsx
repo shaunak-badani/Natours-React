@@ -14,8 +14,9 @@ const FrontBanner = () => {
                     <span className={styles.headingPrimaryMain}>Outdoors </span>
                     <span className={styles.headingPrimarySub}>is where life happens</span>
                 </h1>
-                <Button 
-                    text={"Discover our tours"} />
+                <Button>
+                    Discover our tours
+                </Button>
             </div>
         </header> 
     );
