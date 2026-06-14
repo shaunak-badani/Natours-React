@@ -17,6 +17,9 @@ const Stories = () => {
                 <div className="story">
                     <figure className="storyShape">
                         <img src={nat8} alt="Person on a tour" className="storyImage"/>
+                        <figcaption className="storyCaption">
+                            Mary Smith
+                        </figcaption>
                     </figure>
                     <div className="storyText">
                         <HeadingTertiary classNames={["uMarginBottomSmall"]}> 

@@ -31,13 +31,42 @@
         -webkit-clip-path: circle(50% at 50% 50%);
 
         transform: translateX(-3rem) skewX(12deg);
+
+        position: relative;
     }
 
     &Image {
         height: 100%;
+
+        transform: translateX(-4rem) scale(1.4);
+        transition: all 0.2s;
     }
 
     &Text {
         transform: skewX(12deg);
+    }
+
+    &Caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: $color-white;
+        text-transform: uppercase;
+        transform: translate(-50%, 20%);
+        text-align: center;
+        font-size: 1.7rem;
+        opacity: 0;
+        transition: all 0.2s;
+        backface-visibility: hidden;
+    }
+
+    &:hover &Caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &Image {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
     }
 }
