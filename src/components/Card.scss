@@ -51,6 +51,9 @@
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
+        background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+                var(--bg-image);
+
         &1 {
             background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
                 url("../assets/img/nat-5.jpg");
@@ -91,14 +94,14 @@
 
     &Details {
         padding: 3rem;
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
 
         ul {
             list-style: none;
-            width: 80%;
-            margin: 0 auto;
 
             li {
-                text-align: center;
                 font-size: 1.5rem;
                 padding: 1rem;
 

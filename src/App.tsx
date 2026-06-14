@@ -10,6 +10,7 @@ import Col from './components/Col';
 import "./pages/Tours.scss";
 import "./components/Card.scss";
 import Button from './components/Button';
+import Card, { CardDetails, CardFront, CardPicture, CardTitle } from './components/Card';
 
 function App() {
   return (
@@ -28,17 +29,13 @@ function App() {
             </CenterText>
             <Row>
               <Col length={1} total={3}>
-                <div className="card">
-                  <div className="cardSide cardSideFront">
-                    <div className="cardPicture cardPicture1">
-                      &nbsp;
-                    </div>
-                    <h4 className="cardHeading">
-                      <span className="cardHeadingSpan cardHeadingSpan1">
-                        The Sea Explorer
-                      </span>
-                    </h4>
-                    <div className="cardDetails">
+                <Card>
+                  <CardFront>
+                    <CardPicture />
+                    <CardTitle>
+                      The Sea Explorer
+                    </CardTitle>
+                    <CardDetails>
                       <ul>
                         <li>3 day tours</li>
                         <li>Up to 30 people</li>
@@ -46,8 +43,8 @@ function App() {
                         <li>Sleep in cozy hotels</li>
                         <li>Difficulty: easy</li>
                       </ul>
-                    </div>
-                  </div>
+                    </CardDetails>
+                  </CardFront>
                   <div className="cardSide cardSideBack cardSideBack1">
                     <div className="cardCta">
                       <div className="cardPriceBox">
@@ -57,7 +54,7 @@ function App() {
                       <Button text="Book now!" />
                     </div>
                   </div>
-                </div>
+                </Card>
               </Col>
               <Col length={1} total={3}>Col 1 of 3</Col>
               <Col length={1} total={3}>Col 1 of 3</Col>
