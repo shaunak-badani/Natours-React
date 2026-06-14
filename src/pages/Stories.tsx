@@ -3,6 +3,7 @@ import { HeadingSecondary, HeadingTertiary } from "../components/Headings";
 import Row from "../components/Row";
 import "./Stories.scss";
 import nat8 from "../assets/img/nat-8.jpg";
+import Story, { StoryFigure, StoryText } from "../components/Story";
 
 const Stories = () => {
 
@@ -14,22 +15,19 @@ const Stories = () => {
                 </HeadingSecondary>
             </CenterText>
             <Row>
-                <div className="story">
-                    <figure className="storyShape">
-                        <img src={nat8} alt="Person on a tour" className="storyImage"/>
-                        <figcaption className="storyCaption">
-                            Mary Smith
-                        </figcaption>
-                    </figure>
-                    <div className="storyText">
+                <Story>
+                    <StoryFigure
+                        imageSrc={nat8}
+                        imageCaption="Mary Smith" />
+                    <StoryText>
                         <HeadingTertiary classNames={["uMarginBottomSmall"]}> 
-                            I had the best week with my friend!
+                            I had the best week with my family!
                         </HeadingTertiary>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quia id pariatur laborum eaque laboriosam amet quibusdam atque iure ullam. Minima excepturi necessitatibus odio saepe aliquam natus dolor at architecto! Minima excepturi necessitatibus odio saepe aliquam natus dolor at architecto!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quia id pariatur laborum eaque laboriosam amet quibusdam atque iure ullam. Minima excepturi necessitatibus odio saepe aliquam natus dolor at architecto!
                         </p>
-                    </div>
-                </div>
+                    </StoryText>
+                </Story>
             </Row>
         </section>
     )
