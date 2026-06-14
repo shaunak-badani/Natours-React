@@ -10,7 +10,7 @@ import Col from './components/Col';
 import "./pages/Tours.scss";
 import "./components/Card.scss";
 import Button from './components/Button';
-import Card, { CardDetails, CardFront, CardPicture, CardTitle } from './components/Card';
+import Card, { CardBack, CardDetails, CardFront, CardPicture, CardTitle } from './components/Card';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           <Feature />
           <section className="sectionTours">
             <CenterText classNames={["uMarginBottomBig"]}>
-                <HeadingSecondary >
+                <HeadingSecondary>
                     Most popular tours
                 </HeadingSecondary>
             </CenterText>
@@ -45,15 +45,13 @@ function App() {
                       </ul>
                     </CardDetails>
                   </CardFront>
-                  <div className="cardSide cardSideBack cardSideBack1">
-                    <div className="cardCta">
-                      <div className="cardPriceBox">
-                        <p className="cardPriceOnly">Only</p>
-                        <p className="cardPriceValue">$297</p>
-                      </div>
-                      <Button text="Book now!" />
+                  <CardBack>
+                    <div className="cardPriceBox">
+                      <p className="cardPriceOnly">Only</p>
+                      <p className="cardPriceValue">$297</p>
                     </div>
-                  </div>
+                    <Button text="Book now!" />
+                  </CardBack>
                 </Card>
               </Col>
               <Col length={1} total={3}>Col 1 of 3</Col>

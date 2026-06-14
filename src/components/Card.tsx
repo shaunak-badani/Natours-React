@@ -55,7 +55,29 @@ const CardDetails = ({ children } : { children : ReactNode }) => {
     )
 }
 
+const CardBack = ({ children } : { children : ReactNode }) => {
+
+    return (
+        <div className="cardSide cardSideBack cardSideBack1">
+            <div className="cardCta">
+                {children}
+            </div>
+        </div>
+    )
+}
+
+const CardBox = ({ children } : { children : ReactNode }) => {
+
+    return (
+        <div className="cardSide cardSideBack cardSideBack1">
+            <div className="cardCta">
+                {children}
+            </div>
+        </div>
+    )
+}
+
 
 export default Card;
 
-export { CardFront, CardPicture, CardTitle, CardDetails };
+export { CardFront, CardPicture, CardTitle, CardDetails, CardBack };
