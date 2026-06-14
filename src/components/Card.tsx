@@ -19,27 +19,42 @@ const CardFront = ({ children } : { children : ReactNode}) => {
     );
 }
 
-const CardPicture = ({ cardUrl } : { cardUrl? : string }) => {
+const CardPicture = ({ cardUrl = defaultImage, colorStyle = 1 } : { cardUrl? : string, colorStyle?: number }) => {
 
-    let cardPictureUrl = cardUrl || defaultImage;
-    console.log("cardPicture Url : ", cardPictureUrl);
+    let cardPictureUrl = cardUrl;
+
+    let currentStyle = 1;
+    if([1,2,3].includes(colorStyle))
+    {
+        currentStyle = colorStyle;
+    }
+
+    const classForBack = `cardPicture${currentStyle}`;
 
     return (
         <div style={{ '--bg-image': `url(${cardPictureUrl})` } as CSSProperties }>
             <div 
-                className="cardPicture"
-                 >
+                className={"cardPicture " + classForBack}
+                >
                 &nbsp;
             </div>
         </div>
     );
 }
 
-const CardTitle = ({ children } : { children : ReactNode }) => {
+const CardTitle = ({ children, colorStyle = 1} : { children : ReactNode,  colorStyle: number }) => {
+
+    let currentStyle = 1;
+    if([1,2,3].includes(colorStyle))
+    {
+        currentStyle = colorStyle;
+    }
+
+    const classForBack = `cardHeadingSpan${currentStyle}`;
 
     return (
         <h4 className="cardHeading">
-            <span className="cardHeadingSpan cardHeadingSpan1">
+            <span className={"cardHeadingSpan " + classForBack}>
                 {children}
             </span>
         </h4>
@@ -55,10 +70,18 @@ const CardDetails = ({ children } : { children : ReactNode }) => {
     )
 }
 
-const CardBack = ({ children } : { children : ReactNode }) => {
+const CardBack = ({ children, colorStyle } : { children : ReactNode, colorStyle?: number }) => {
+
+    let currentStyle = 1;
+    if(colorStyle && [1,2,3].includes(colorStyle))
+    {
+        currentStyle = colorStyle;
+    }
+
+    const classForBack = `cardSideBack${currentStyle}`;
 
     return (
-        <div className="cardSide cardSideBack cardSideBack1">
+        <div className={"cardSide cardSideBack " + classForBack}>
             <div className="cardCta">
                 {children}
             </div>

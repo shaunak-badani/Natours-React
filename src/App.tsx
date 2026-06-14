@@ -31,8 +31,8 @@ function App() {
               <Col length={1} total={3}>
                 <Card>
                   <CardFront>
-                    <CardPicture />
-                    <CardTitle>
+                    <CardPicture colorStyle={1}/>
+                    <CardTitle colorStyle={1}>
                       The Sea Explorer
                     </CardTitle>
                     <CardDetails>
@@ -45,7 +45,7 @@ function App() {
                       </ul>
                     </CardDetails>
                   </CardFront>
-                  <CardBack>
+                  <CardBack colorStyle={1}>
                     <div className="cardPriceBox">
                       <p className="cardPriceOnly">Only</p>
                       <p className="cardPriceValue">$297</p>
@@ -54,8 +54,58 @@ function App() {
                   </CardBack>
                 </Card>
               </Col>
-              <Col length={1} total={3}>Col 1 of 3</Col>
-              <Col length={1} total={3}>Col 1 of 3</Col>
+              <Col length={1} total={3}>
+                <Card>
+                  <CardFront>
+                    <CardPicture colorStyle={2}/>
+                    <CardTitle colorStyle={2}>
+                      The Forest Hiker
+                    </CardTitle>
+                    <CardDetails>
+                      <ul>
+                        <li>7 day tours</li>
+                        <li>Up to 40 people</li>
+                        <li>6 tour guides</li>
+                        <li>Sleep in provided tents</li>
+                        <li>Difficulty: medium</li>
+                      </ul>
+                    </CardDetails>
+                  </CardFront>
+                  <CardBack colorStyle={2}>
+                    <div className="cardPriceBox">
+                      <p className="cardPriceOnly">Only</p>
+                      <p className="cardPriceValue">$497</p>
+                    </div>
+                    <Button text="Book now!" />
+                  </CardBack>
+                </Card>
+              </Col>
+              <Col length={1} total={3}>
+                <Card>
+                  <CardFront>
+                    <CardPicture colorStyle={3}/>
+                    <CardTitle colorStyle={3}>
+                      The Snow Adventurer
+                    </CardTitle>
+                    <CardDetails>
+                      <ul>
+                        <li>5 day tours</li>
+                        <li>Up to 15 people</li>
+                        <li>3 tour guides</li>
+                        <li>Sleep in provided tents</li>
+                        <li>Difficulty: hard</li>
+                      </ul>
+                    </CardDetails>
+                  </CardFront>
+                  <CardBack colorStyle={3}>
+                    <div className="cardPriceBox">
+                      <p className="cardPriceOnly">Only</p>
+                      <p className="cardPriceValue">$897</p>
+                    </div>
+                    <Button text="Book now!" />
+                  </CardBack>
+                </Card>
+              </Col>
             </Row>
           </section>
         </main>
