@@ -9,6 +9,7 @@ import Row from './components/Row';
 import Col from './components/Col';
 import "./pages/Tours.scss";
 import "./components/Card.scss";
+import Button from './components/Button';
 
 function App() {
   return (
@@ -48,7 +49,13 @@ function App() {
                     </div>
                   </div>
                   <div className="cardSide cardSideBack cardSideBack1">
-                    Back
+                    <div className="cardCta">
+                      <div className="cardPriceBox">
+                        <p className="cardPriceOnly">Only</p>
+                        <p className="cardPriceValue">$297</p>
+                      </div>
+                      <Button text="Book now!" />
+                    </div>
                   </div>
                 </div>
               </Col>
