@@ -52,8 +52,32 @@ const FormLabel = ({children, classNames = []}: ComponentProps<'label'> & PropTy
     )
 }
 
+type RadioPropType = { 
+    classNames?: string[];
+    label: string;
+    labelFor: string;
+    name: string;
+
+};
+
+const RadioInput = ({classNames = [], name, labelFor, label } : RadioPropType) => {
+
+    const allClasses: string = `formRadioGroup ${classNames.join(' ')}`; 
+
+    return (
+        <div className={allClasses}>
+            <input type="radio" className="formRadioInput" id={labelFor} name={name} />
+            <label htmlFor={labelFor} className="formRadioLabel">
+                <span className="formRadioButton"></span>
+                {label}
+            </label>
+        </div>
+    )
+
+}
+
 
 
 export default Form;
 
-export { FormGroup, FormLabel, Input };
+export { FormGroup, FormLabel, Input, RadioInput };

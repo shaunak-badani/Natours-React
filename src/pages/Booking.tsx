@@ -1,5 +1,5 @@
 import Button, { SecondaryButton } from "../components/Button";
-import Form, { FormGroup, FormLabel, Input } from "../components/Form";
+import Form, { FormGroup, FormLabel, Input, RadioInput } from "../components/Form";
 import { HeadingSecondary } from "../components/Headings";
 import Row from "../components/Row";
 import "./Booking.scss";
@@ -29,20 +29,8 @@ const Booking = () => {
                             </FormGroup>
                             <FormGroup classNames={["uMarginBottomMedium"]}>
                                 {/* There is no way of styling the radio buttons, so we will create our own */}
-                                <div className="formRadioGroup">
-                                    <input type="radio" className="formRadioInput" id="small" name="size" />
-                                    <label htmlFor="small" className="formRadioLabel">
-                                        <span className="formRadioButton"></span>
-                                        Small tour group
-                                    </label>
-                                </div>
-                                <div className="formRadioGroup">
-                                    <input type="radio" className="formRadioInput" id="large" name="size" />
-                                    <label htmlFor="large" className="formRadioLabel">
-                                        <span className="formRadioButton"></span>
-                                        Large tour group
-                                    </label>
-                                </div>
+                                <RadioInput name="size" labelFor="small" label="Small tour group" />
+                                <RadioInput name="size" labelFor="large" label="Large tour group" />
                             </FormGroup>
                             <FormGroup>
                                 <button className={[btnStyles.btn, btnStyles.btnGreen].join(" ")}>Next step &rarr;</button>
