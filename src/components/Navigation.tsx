@@ -7,7 +7,11 @@ const Navigation = () => {
         <div className="navigation">
             <input type="checkbox" className="navigationCheckbox" id="naviToggle" />
 
-            <label htmlFor="naviToggle" className="navigationButton">MENU</label>
+            <label htmlFor="naviToggle" className="navigationButton">
+                <span className="navigationIcon">
+                    &nbsp;
+                </span>
+            </label>
 
             <div className="navigationBackground">&nbsp;</div>
 
