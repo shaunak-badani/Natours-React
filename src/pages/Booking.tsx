@@ -1,8 +1,7 @@
-import CenterText from "../components/CenterText";
+import Form, { FormGroup, FormLabel, Input } from "../components/Form";
 import { HeadingSecondary } from "../components/Headings";
 import Row from "../components/Row";
 import "./Booking.scss";
-
 
 const Booking = () => {
 
@@ -16,16 +15,16 @@ const Booking = () => {
                                 Start booking now
                             </HeadingSecondary>
                         </div>
-                        <form action="#" className="form">
-                            <div className="formGroup">
-                                <input type="text" className="formInput" placeholder="Full Name" id="name" required />
-                                <label htmlFor="name" className="formLabel">Full name</label>
-                            </div>
-                            <div className="formGroup">
-                                <input type="email" className="formInput" placeholder="Email address" id="email" required />
-                                <label htmlFor="email" className="formLabel">Full name</label>
-                            </div>
-                        </form>
+                        <Form>
+                            <FormGroup>
+                                <Input type="text" placeholder="Full Name" id="name" required />
+                                <FormLabel htmlFor="name" className="formLabel">Full name</FormLabel>
+                            </FormGroup>
+                            <FormGroup>
+                                <Input type="email" placeholder="Email Address" id="email" required />
+                                <FormLabel htmlFor="email">Email address</FormLabel>
+                            </FormGroup>
+                        </Form>
                     </div>
                 </div>
             </Row>
