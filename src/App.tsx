@@ -9,22 +9,22 @@ import Tours from './pages/SectionTours';
 import Stories from './pages/Stories';
 import Booking from './pages/Booking';
 import Footer from './pages/Footer';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <>
-      <section>
-        <FrontBanner />
-        {/* <GridTest /> */}
-        <main>
-          <About />
-          <Feature />
-          <Tours />
-          <Stories />
-          <Booking />
-        </main>
-        <Footer />
-      </section>
+      <Navigation />
+      <FrontBanner />
+      {/* <GridTest /> */}
+      <main>
+        <About />
+        <Feature />
+        <Tours />
+        <Stories />
+        <Booking />
+      </main>
+      <Footer />
     </>
   )
 }
