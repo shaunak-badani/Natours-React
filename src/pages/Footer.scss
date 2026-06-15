@@ -1,10 +1,15 @@
 @use "../styles/variables" as *;
+@use "../styles/mixins" as *;
 
 .footer {
     background-color: $color-grey-dark-3;
     padding: 10rem 0;
     font-size: 1.4rem;
     color: $color-grey-light-1;
+
+    @include respond(tab-port) {
+        padding: 8rem 0;
+    }
 
     &LogoBox {
         // text align only centers inline and inline-block elements
@@ -24,6 +29,11 @@
         
         // This works because inline block does not occupy 100% of the width, only how much it needs
         display: inline-block;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &List {
@@ -64,5 +74,10 @@
         padding-top: 2rem;
         width: 80%;
         float: right;
+
+        @include respond(tab-port) {
+            width: 100%;
+            float: none;
+        }
     }
 }
