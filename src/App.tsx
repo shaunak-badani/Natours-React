@@ -8,6 +8,7 @@ import "./components/Card.scss";
 import Tours from './pages/SectionTours';
 import Stories from './pages/Stories';
 import Booking from './pages/Booking';
+import Footer from './pages/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Stories />
           <Booking />
         </main>
+        <Footer />
       </section>
     </>
   )
