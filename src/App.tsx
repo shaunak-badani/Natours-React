@@ -10,6 +10,7 @@ import Stories from './pages/Stories';
 import Booking from './pages/Booking';
 import Footer from './pages/Footer';
 import Navigation from './components/Navigation';
+import Popup from './components/Popup';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Booking />
       </main>
       <Footer />
+      <Popup />
     </>
   )
 }

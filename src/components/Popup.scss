@@ -1,0 +1,67 @@
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
+
+.popup {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color-black, 0.8);
+    z-index: 9999;
+
+    &Content {
+        width: 75%;
+
+        background-color: $color-white;
+
+        @include absCenter;
+        
+        border-radius: 3px;
+        box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+        display: table;
+        overflow: hidden;
+    }
+
+    &Left {
+        width: 33.3333%;
+        // table cell hack allows us to have two elements
+        // side by side with the same height
+        // the parent container needs to get display:table as well
+        display: table-cell;
+    }
+
+    &Right {
+        width: 66.6667%;
+        display: table-cell;
+        vertical-align: middle;
+
+        padding: 3rem 5rem;
+
+    }
+
+    &Img {
+        display: block;
+        width: 100%;
+    }
+
+    &Text {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+
+        -moz-column-count: 2;
+        -moz-column-gap: 4rem; // 1em = 14px = current font size
+        -moz-column-rule: 1px solid $color-grey-light-2;
+
+        column-count: 2;
+        column-gap: 4rem; // 1em = 14px = current font size
+        column-rule: 1px solid $color-grey-light-2;
+
+        // html lang=en or some language needs to be specified at the top level html for this to work
+        hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+    }
+}
