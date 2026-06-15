@@ -1,5 +1,6 @@
 @use './variables' as *; 
 @use './typography' as *; 
+@use './mixins' as *; 
 
 /* universal reset */
 *,
@@ -10,6 +11,37 @@
   box-sizing: inherit;
 }
 
+html {
+  // This defines what 1 rem is
+  font-size: 62.5%; // 1 rem = 10px; 10px / 16px = 62.5%
+
+  @include respond(big-desktop) { // width >= 1800?
+    font-size: 75%; // 1rem = 12px, 12 / 16 = 75%
+  }
+
+  @include respond(tab-land) { // width < 1200?
+    font-size: 56.25%; // 1 rem = 9px, 9 / 16 = 56.25%
+  }
+
+  @include respond(tab-port) { // width < 900?
+    font-size: 50%; // 1 rem = 8px; 8px / 16px = 50%
+  }
+
+  @include respond(phone) { // width < 600?
+    font-size: 50%; // 1 rem = 8px; 8px / 16px = 50%
+  }
+}
+
 body {
   box-sizing: border-box;
+  /* padding does not get inherited, just applied all around the body */
+  padding: 3rem; 
+  /* 3 rem relative to root = 3 * 10px = 30px */
+
+  @include respond(tab-port) { // width < 900?
+    padding: 0;
+  }
+
+
+  
 }
