@@ -7,6 +7,7 @@ import "./pages/Tours.scss";
 import "./components/Card.scss";
 import Tours from './pages/SectionTours';
 import Stories from './pages/Stories';
+import Booking from './pages/Booking';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Feature />
           <Tours />
           <Stories />
+          <Booking />
         </main>
       </section>
     </>
