@@ -19,6 +19,7 @@
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
+        transition: all 0.3s;
 
 
         &:focus {
@@ -59,5 +60,61 @@
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
+    }
+    
+    // RADIO STYLING
+
+    &RadioGroup {
+        display: inline-block;
+        
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+        // width: 49%;
+    }
+
+    &RadioInput {
+        display: none;
+    }
+
+    &RadioLabel {
+        font-size: $default-font-size;
+        cursor: pointer;
+
+        position: relative;
+        padding-left: 3.5rem;
+    }
+
+    &RadioButton {
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: -0.4rem;
+
+        &::after {
+            content: "";
+            display: block;
+            background-color: $color-primary;
+            height: 1.2rem;
+            width: 1.2rem;
+            border-radius: 50%;
+            // position on parent need not be relative, it just needs to be specified
+            // position could have any value as long as it is declared
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+    }
+
+    &RadioInput:checked ~ &RadioLabel &RadioButton::after {
+        opacity: 1;
+         
     }
 }
