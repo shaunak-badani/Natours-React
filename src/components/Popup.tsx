@@ -7,13 +7,14 @@ import Button from "./Button";
 const Popup = () => {
 
     return (
-        <div className="popup">
+        <div className="popup" id="popup">
             <div className="popupContent">
                 <div className="popupLeft">
                     <img src={nat8} alt="Tour photo" className="popupImg"/>
                     <img src={nat9} alt="Person photo" className="popupImg"/>
                 </div>
                 <div className="popupRight">
+                    <a href="#sectionTours" className="popupClose">&times;</a>
                     <HeadingSecondary classNames={["uMarginBottomSmall"]}>
                         Start booking now
                     </HeadingSecondary>

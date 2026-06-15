@@ -1,15 +1,15 @@
-import type { ReactNode } from "react";
+import type { ComponentProps, ReactNode } from "react";
 import styles from "./Button.module.scss";
 
 const ColorSchemes: Record<string, string> = { White: styles.btnWhite, Green: styles.btnGreen };
 type ColorSchemeKey = keyof typeof ColorSchemes;
 
-const Button = (props: { scheme?: ColorSchemeKey, children? : ReactNode}) => {
+const Button = ({scheme, children, ...props}: ComponentProps<'a'> & { scheme?: ColorSchemeKey, children? : ReactNode}) => {
 
-    const colorScheme: string = props.scheme || "White";
+    const colorScheme: string = scheme || "White";
     return (
-        <a href="#" className={[styles.btn, ColorSchemes[colorScheme]].join(" ")}>
-            {props.children || "Default button message"}
+        <a className={[styles.btn, ColorSchemes[colorScheme]].join(" ")} {...props} >
+            {children || "Default button message"}
         </a>
     )
 };

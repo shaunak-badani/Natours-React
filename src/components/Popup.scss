@@ -10,6 +10,9 @@
     width: 100%;
     background-color: rgba($color-black, 0.8);
     z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
 
     &Content {
         width: 75%;
@@ -22,6 +25,41 @@
         box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
         display: table;
         overflow: hidden;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+        transition: all 0.5s 0.2s;
+    }
+
+    // when #popup is navigated to, then the target will be enabled
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &Content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &Close {
+
+        &:link,
+        &:visited {
+            color: $color-grey-dark;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+
+            transition: all 0.2s;
+            line-height: 1;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
     }
 
     &Left {
