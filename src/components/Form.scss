@@ -1,4 +1,5 @@
 @use "../styles/variables" as *;
+@use "../styles/mixins" as *;
 
 .form
 {
@@ -20,6 +21,10 @@
         width: 90%;
         display: block;
         transition: all 0.3s;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
 
 
         &:focus {
@@ -71,6 +76,11 @@
             margin-right: 1.5rem;
         }
         // width: 49%;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 
     &RadioInput {
