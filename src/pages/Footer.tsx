@@ -1,5 +1,8 @@
 import "./Footer.scss";
-import logo from "../assets/img/logo-green-2x.png";
+import logo2x from "../assets/img/logo-green-2x.png";
+import logo1x from "../assets/img/logo-green-1x.png";
+import logoGreenSmall1x from "../assets/img/logo-green-small-1x.png";
+import logoGreenSmall2x from "../assets/img/logo-green-small-2x.png";
 import Row from "../components/Row";
 import Col from "../components/Col";
 
@@ -8,7 +11,10 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footerLogoBox">
-                <img src={logo} alt="Full logo" className="footerLogo" />
+                <picture className="footerLogo">
+                    <source srcSet={logoGreenSmall1x + " 1x, " + logoGreenSmall2x + " 2x"} media="(max-width: 37.5em)" />
+                    <img srcSet={logo1x + " 1x, " + logo2x + " 2x"} alt="Full logo" />
+                </picture>
             </div>
             <Row>
                 <Col length={1} total={2}>
