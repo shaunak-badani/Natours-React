@@ -1,5 +1,6 @@
 @use "../styles/variables" as *;
 @use "../styles/typography" as *;
+@use "../styles/mixins" as *;
 
 .sectionFeatures
 {
@@ -16,5 +17,9 @@
     // direct child selector
     & > * {
         transform: skewY(7deg);
+    }
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
     }
 }

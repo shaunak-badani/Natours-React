@@ -2,7 +2,7 @@ import CenterText from "../components/CenterText";
 import Col from "../components/Col";
 import Row from "../components/Row";
 import styles from "./About.module.scss";
-import "../styles/UtilityClasses.css";
+import "../styles/UtilityClasses.scss";
 
 import { HeadingSecondary, HeadingTertiary } from "../components/Headings";
 import Paragraph from "../components/Paragraph";

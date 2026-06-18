@@ -4,7 +4,7 @@ import { HeadingSecondary } from "../components/Headings";
 import Row from "../components/Row";
 import "./Booking.scss";
 import btnStyles from "../components/Button.module.scss";
-import "../styles/UtilityClasses.css";
+import "../styles/UtilityClasses.scss";
 
 const Booking = () => {
 

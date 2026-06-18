@@ -1,4 +1,4 @@
-import "../styles/UtilityClasses.css"
+import "../styles/UtilityClasses.scss"
 
 import { type ReactNode } from "react";
 

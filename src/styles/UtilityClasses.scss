@@ -1,4 +1,6 @@
 
+@use "../styles/mixins" as *;
+
 /* It is standard practice to write !important on utility classes */
 .uMarginBottomSmall {
     margin-bottom: 1.5rem !important;
@@ -6,11 +8,19 @@
 
 .uMarginBottomMedium {
     margin-bottom: 4rem !important;
+
+    @include respond(tab-port) {
+        margin-bottom: 3rem !important;  
+    }
 }
 
 
 .uMarginBottomBig {
     margin-bottom: 8rem !important;
+
+    @include respond(tab-port) {
+        margin-bottom: 5rem !important;  
+    }
 }
 
 .uMarginTopBig {

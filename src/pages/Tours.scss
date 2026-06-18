@@ -1,9 +1,14 @@
 @use "../styles/variables" as *;
 @use "../styles/typography" as *;
+@use "../styles/mixins" as *;
 
 .sectionTours
 {
     background-color: $color-grey-light-1;
     padding: 25rem 0 15rem 0;
     margin-top: -11.5rem;
+
+    @include respond(tab-port) {
+        padding: 20rem 0 10rem 0;
+    }
 }
