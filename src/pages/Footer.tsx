@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="footerLogoBox">
                 <picture className="footerLogo">
                     <source srcSet={logoGreenSmall1x + " 1x, " + logoGreenSmall2x + " 2x"} media="(max-width: 37.5em)" />
-                    <img srcSet={logo1x + " 1x, " + logo2x + " 2x"} alt="Full logo" />
+                    <img srcSet={logo1x + " 1x, " + logo2x + " 2x"} alt="Full logo" src={logo2x} />
                 </picture>
             </div>
             <Row>

@@ -8,9 +8,12 @@ import { HeadingSecondary, HeadingTertiary } from "../components/Headings";
 import Paragraph from "../components/Paragraph";
 import { SecondaryButton } from "../components/Button";
 
-import nat1 from "../assets/img/nat-1-large.jpg";
-import nat2 from "../assets/img/nat-2-large.jpg";
-import nat3 from "../assets/img/nat-3-large.jpg";
+import nat1 from "../assets/img/nat-1.jpg";
+import nat1Large from "../assets/img/nat-1-large.jpg";
+import nat2 from "../assets/img/nat-2.jpg";
+import nat2Large from "../assets/img/nat-2-large.jpg";
+import nat3 from "../assets/img/nat-3.jpg";
+import nat3Large from "../assets/img/nat-3-large.jpg";
 
 import "../components/Composition.scss";
 
@@ -44,9 +47,21 @@ const About = () => {
                 </Col>
                 <Col length={1} total={2}>
                     <div className="composition">
-                        <img src={nat1} alt="Photo 1" className="compositionPhoto compositionPhotoP1" />
-                        <img src={nat2} alt="Photo 2" className="compositionPhoto compositionPhotoP2" />
-                        <img src={nat3} alt="Photo 3" className="compositionPhoto compositionPhotoP3" />
+                        <img srcSet={nat1 + " 300w," + nat1Large + " 1000w"} 
+                            sizes={"(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"} 
+                            alt="Photo 1"
+                            className="compositionPhoto compositionPhotoP1" 
+                            src={nat1Large} />
+                        <img srcSet={nat2 + " 300w," + nat2Large + " 1000w"} 
+                            sizes={"(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"} 
+                            alt="Photo 2"
+                            className="compositionPhoto compositionPhotoP2" 
+                            src={nat2Large} />
+                        <img srcSet={nat3 + " 300w," + nat3Large + " 1000w"} 
+                            sizes={"(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"} 
+                            alt="Photo 3"
+                            className="compositionPhoto compositionPhotoP3" 
+                            src={nat2Large} />
                     </div>
                 </Col>
             </Row>
